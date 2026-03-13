@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Outfit", sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav{
+height: 72px;
+}
+.nav::after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: oklch(.872 .01 258.338);
+    bottom: 0;
+    left: 0;
+}
+.menu-icon {
+    display: none;
+    width: 28px;
+    cursor: pointer;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+.nav .container .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    font-weight: 400;
+    font-size: 16px;
+}
+.nav .container .item a {
+    font-weight: 400;
+    font-size: 16px;
+    color: oklch(.373 .034 256.733);
+}
+
+.nav .container .Logo{
+    width: 152px;
+}
+.nav .container .item .search {
+    border: 1px solid  oklch(.872 .01 258.338);
+    padding: 0px 12px;
+    border-radius: 20px;
+}
+.nav .container .item .search input {
+ border: 0;
+ padding: 6px 0;
+ background-color: transparent;
+}
+.nav .container  .cart{
+    position: relative;
+
+}
+.nav .container  .cart img{
+    opacity: 80%;
+}
+
+.nav .container  .cart button{
+    position: absolute;
+    right: calc(0.25rem * -3);
+    top:  calc(0.25rem * -2);
+    border: 0;
+    background-color:#4fbf8b;
+    color: white;
+    width: calc(0.25rem * 4.5);
+    height: calc(0.25rem * 4.5);
+    border-radius: 3.40282e38px;
+    line-height: calc(1rem/0.75rem);
+    font-size: 0.75rem;
+}
+.nav .container .item .Login-btn{
+    font-size: 16px;
+    background-color: #4fbf8b;
+    color: white;
+    padding: 8px 32px;
+    border-radius: 3.40282e38px;
+    
+}
+.nav .container .item .Login-btn:hover {
+background-color: #44ae7c;
+}
+.nav .container .cart {
+    position: relative; /* زي الأول */
+    margin-left: 20px; /* عشان يبقى بعيد عن اللوجو */
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav .container {
+        position: relative;
+    }
+
+    .nav .container .item {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 15px;
+        display: none;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        z-index: 100;
+    }
+
+    .nav .container .item.active {
+        display: flex;
+    }
+    .nav .container .item .cart {
+        /* position: static;     تلغي absolute داخل القائمة */
+        display: block;   /* تأكد إنها ظاهرة */
+        margin-left: auto; /* تخليها يمين */
+    }
+
+    .nav .container .cart {
+        display: block;   /* تظهر فوق الهامبرجر */
+    }
+    
+
+}
+
+/* الكارت الخارجي (برا .item) يظهر في الموبايل فقط */
+.nav .container .sm-nav > .cart {
+    display: none; /* بشكل افتراضي مخفي */
+}
+
+@media (max-width: 768px) {
+    .nav .container .sm-nav > .cart {
+        display: block; /* يظهر في الموبايل */
+        /* position: absolute;
+        top: 12px;
+        right: 16px; */
+    }
+.nav .container .sm-nav{
+    display: flex;
+    gap: 40px;
+}
+    /* نخلي الكارت جوا .item مخفي في الموبايل */
+    .nav .container .item .cart {
+        display: none !important;
+    }
+}
+
+/* الكارت الداخلي (جوا .item) يظهر في الديسكتوب فقط */
+.nav .container .item .cart {
+    display: flex; /* يظهر افتراضياً في الديسكتوب */
+}
+
+@media (max-width: 768px) {
+    .nav .container .item .cart {
+        display: none; /* مخفي في الموبايل */
+    }
+}
+
+
+
+/* footer */
+.footers{
+    margin: 96px 0 0;
+    background-color: color-mix(in oklab, #4fbf8b 10%, transparent);
+    
+}
+.footers .container .content{
+    padding-bottom:40px ;
+    padding-top:40px ;
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+    
+}
+.footers .container .content .left-content{
+    max-width: 410px;
+}
+.footers .container .content .left-content p{
+    max-width: 410px;
+    margin: 24px 0 0;
+        color: oklch(.551 .027 264.364);
+    font-size: 16px;
+}
+.footers .container .content .right-content{
+    display: flex;
+    gap: 60px;
+}
+.footers .container .content .right-content h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: oklch(.21 .034 264.665);
+    font-weight: 700;
+}
+.footers .container .content .right-content li{
+    margin: 0 0 4px;
+}
+.footers .container .content .right-content li a{
+    font-size:14px;
+    color: oklch(.551 .027 264.364);
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footers .container .content .right-content li a:hover{
+    color:#4fbf8b;
+}
+ul{
+    list-style:none;
+    padding:0;
+}
+.footers .copy{
+    text-align: center;
+    position: relative;
+}
+
+.footers .copy::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: oklch(.872 .01 258.338);
+}
+.footers .copy p {
+    margin: 0;
+    padding: 16px 0;
+}
+/* Tablet */
+@media (max-width: 992px){
+
+    .footers .container .content{
+        flex-direction: column;
+        gap:30px;
+    }
+
+    .footers .container .content .right-content{
+        gap:40px;
+        flex-wrap:wrap;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+    .footers .container .content .right-content{
+        flex-direction: column;
+        gap:25px;
+    }
+
+    .footers .container .content .left-content{
+        max-width:100%;
+    }
+
+    .footers .container .content .left-content p{
+        max-width:100%;
+        font-size:14px;
+    }
+
+}
+
+/* Small phones */
+@media (max-width:480px){
+
+    .footers .container .content{
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+
+    .footers .copy p{
+        font-size:13px;
+    }
+
+}
+/* end footer */

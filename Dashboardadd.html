@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Product</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/addHotel.css">
+<link rel="stylesheet" href="assets/css/dashboard.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="main-nav">
+    <div class="logo"><img src="assets/images/logo.svg" alt="logo"></div>
+
+    <div class="nav-right">
+        <p class="admin-greet">Hi! Admin</p>
+        <button class="logout-btn">Logout</button>
+    </div>
+</div>
+
+<div class="dash">
+    <div class="links">
+        <a href="#"><img src="assets/images/add_icon.svg" alt=""> Dashboard</a>
+        <a href="#"><img src="assets/images/product_list_icon.svg" alt=""> Add Product</a>
+        <a href="#"><img src="assets/images/order_icon.svg" alt=""> Product List</a>
+    </div>
+
+    <div class="content">
+        <h1>Add New Product</h1>
+
+        <form action="/AddProduct" method="POST" enctype="multipart/form-data" class="add-product-form">
+            
+            <!-- Product Images -->
+            <div class="image-grid">
+                <label class="image-upload">
+                    <input type="file" name="images[]" accept="image/*">
+                    <span><img src="assets/images/upload_area.png" alt="upload"></span>
+                </label>
+                <label class="image-upload">
+                    <input type="file" name="images[]" accept="image/*">
+                    <span><img src="assets/images/upload_area.png" alt="upload"></span>
+                </label>
+                <label class="image-upload">
+                    <input type="file" name="images[]" accept="image/*">
+                    <span><img src="assets/images/upload_area.png" alt="upload"></span>
+                </label>
+                <label class="image-upload">  
+                    <input type="file" name="images[]" accept="image/*">
+                    <span><img src="assets/images/upload_area.png" alt="upload"></span>
+                </label>
+            </div>
+
+            <!-- Product Name -->
+            <div>
+                <label>Product Name</label>
+                <input type="text" name="product_name" placeholder="Type here" required>
+            </div>
+
+            <!-- Product Description -->
+            <div>
+                <label>Product Description</label>
+                <textarea name="product_desc" rows="4" placeholder="Type here"></textarea>
+            </div>
+
+            <!-- Category -->
+            <div>
+                <label>Category</label>
+                <select name="category" required>
+                    <option value="">Select Category</option>
+                    <option value="food">Food</option>
+                    <option value="beverages">Beverages</option>
+                    <option value="snacks">Snacks</option>
+                </select>
+            </div>
+
+            <!-- Prices -->
+            <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                <div style="flex:1">
+                    <label>Product Price</label>
+                    <input type="number" name="price" min="0" value="0">
+                </div>
+                <div style="flex:1">
+                    <label>Offer Price</label>
+                    <input type="number" name="offer_price" min="0" value="0">
+                </div>
+            </div>
+
+            <button type="submit">ADD</button>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>

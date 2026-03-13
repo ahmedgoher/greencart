@@ -1,0 +1,110 @@
+*{
+    margin:0; padding:0; box-sizing:border-box; font-family:Outfit, sans-serif;
+}
+body{
+    background:#f5f5f5; color:#373634;
+}
+.main-nav{
+    height:72px; background:white; display:flex; align-items:center; padding:0 20px; box-shadow:0 1px 3px rgba(0,0,0,0.1);
+}
+.main-nav .logo img{height:40px;}
+.dash{display:flex;}
+.links{
+    width:200px; background:white; padding:20px; display:flex; flex-direction:column; gap:15px; height:100vh;
+}
+.links a{
+    text-decoration:none; color:#373634; display:flex; align-items:center; gap:8px;
+}
+.content{
+    flex:1; padding:40px; max-width:1000px; margin:auto;
+    background:white; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+.content h1{font-size:28px; margin-bottom:20px;}
+.content h2{font-size:22px; margin-bottom:20px;}
+.add-product-form{
+    display:flex; flex-direction:column; gap:20px;
+}
+.add-product-form label{
+    font-weight:500; margin-bottom:5px; display:block;
+}
+.add-product-form input, 
+.add-product-form select, 
+.add-product-form textarea{
+    width:100%; padding:8px 12px; border:1px solid #ccc; border-radius:6px; font-size:14px;
+}
+.add-product-form textarea{resize:none;}
+.image-grid{
+    display:flex; gap:15px; flex-wrap:wrap;
+}
+.image-upload{
+    position:relative; width:100px; height:100px; border:1px dashed #ccc; display:flex; align-items:center; justify-content:center; border-radius:6px; cursor:pointer;
+}
+.image-upload input{display:none;}
+.image-upload span img{width:50px; height:50px;}
+.add-product-form button{
+    padding:12px; background:#4fbf8b; color:white; border:none; border-radius:6px; cursor:pointer; font-size:16px;
+}
+.add-product-form button:hover{background:#44ae7c;}
+@media(max-width:768px){
+    .dash{flex-direction:column;}
+    .links{width:100%; flex-direction:row; overflow-x:auto; height:auto; padding:10px;}
+    .links a{flex:1; justify-content:center;}
+}
+.main-nav{
+    height:72px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* نص الترحيب */
+.admin-greet{
+    margin-right:15px;
+    font-weight:500;
+    color:#373634;
+}
+.nav-right {
+     display:flex;
+    align-items:center; 
+    gap: 20px;
+}
+.nav-right p{
+    margin: 0 ;
+    padding: 0;
+}
+/* زر Logout */
+.logout-btn{
+    padding:6px 14px;
+    background:#4fbf8b;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:14px;
+}
+.logout-btn:hover{
+    background:#44ae7c;
+}
+
+/* Responsive للهواتف */
+@media(max-width:768px){
+    .nav-right{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        gap:10px;
+    }
+
+    .admin-greet{
+        font-size:14px;
+        margin-right:5px;
+    }
+
+    .logout-btn{
+        padding:5px 10px;
+        font-size:13px;
+    }
+}

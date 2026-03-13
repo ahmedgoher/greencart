@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <div class="main-nav">
+     <div class="containers">
+    <div class="nav-bar">
+
+        <div class="logo"><img src="assets/imgs/logo.svg" alt="logo"></div>
+        <div class="img"><img src="assets/imgs/male-face-icon-default-profile-image.jpg" alt="default-profile"></div>
+        <div class="menu-btn" id="menuBtn">
+    ☰
+</div>
+
+    </div>
+    </div>
+    </div>
+<div class="body">
+    <div class="dash">
+        <!-- <div class="containers"> -->
+            <div class="links">
+            <a href="#"><img src="assets/imgs/dashboardIcon.svg" alt=""> Dashboard</a>
+            <a href="#"><img src="assets/imgs/addIcon.svg" alt=""> Add Room</a>
+            <a href="#"><img src="assets/imgs/listIcon.svg" alt=""> List Room</a>
+            <!-- </div> -->
+    </div>
+    
+
+        </div>
+        <div class="content">
+        <div class="head">
+            <h1>Dashboard</h1>
+            <p class="text">Monitor your rooms in real time and stay fully in control of every reservation, check-in, and check-out process.  
+            Manage bookings, availability, and guest details effortlessly from one powerful and intuitive dashboard.
+            </p>
+    </div>
+    <div class="btns">
+    <div class="total-money">
+        <img src="assets/imgs/totalBookingIcon.svg" alt="">
+        <div class="text">
+        <p class="title">total Booking</p>
+        <p class="num">0</p>
+        </div>
+    </div>
+    <div class="total-money">
+        <img src="assets/imgs/totalRevenueIcon.svg" alt="">
+        <div class="text">
+        <p class="title">total Revenue</p>
+        <p class="num">$ 0</p>
+        </div>
+    </div>
+</div>
+   <table>
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Room Name</th>
+            <th>Total Amount</th>
+            <th>Payment Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ahmed</td>
+            <td>Monaliza</td>
+            <td>$300</td>
+            <td><span class="status paid">Paid</span></td>
+        </tr>
+
+        <tr>
+            <td>Omar</td>
+            <td>Royal Suite</td>
+            <td>$450</td>
+            <td><span class="status pending">Pending</span></td>
+        </tr>
+
+        <tr>
+            <td>Sara</td>
+            <td>Deluxe Room</td>
+            <td>$200</td>
+            <td><span class="status canceled">Canceled</span></td>
+        </tr>
+    </tbody>
+</table>
+
+
+</div>
+    </div>
+
+    <script src="assets/js/assets.js"></script>
+     <script src="assets/js/bootstrap.bundle.min.js"></script>
+     <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const dash = document.querySelector(".dash");
+
+    menuBtn.onclick = () => {
+        dash.classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
