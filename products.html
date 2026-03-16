@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Product</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/productList.css">
+<link rel="stylesheet" href="assets/css/dashboard.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="main-nav">
+    <div class="logo"><img src="assets/images/logo.svg" alt="logo"></div>
+
+    <div class="nav-right">
+        <p class="admin-greet">Hi! Admin</p>
+        <button class="logout-btn">Logout</button>
+    </div>
+</div>
+
+<div class="dash">
+    <div class="links">
+        <a href="#"><img src="assets/images/add_icon.svg" alt=""> Add Product</a>
+        <a href="#"><img src="assets/images/product_list_icon.svg" alt=""> Product List</a>
+        <a href="#"><img src="assets/images/order_icon.svg" alt=""> order</a>
+    </div>
+    <div class="content">
+        <div class="products-page">
+
+<h2>All Products</h2>
+
+<table class="products-table">
+
+<thead>
+<tr>
+<th>Image</th>
+<th>Product</th>
+<th>Category</th>
+<th>Selling Price</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td><img src="assets/images/brown_bread_image.png"></td>
+<td>Brown Bread 400g</td>
+<td>Bakery</td>
+<td>$35</td>
+<td><span class="status active">In Stock</span></td>
+<td><button class="toggle-btn">Disable</button></td>
+</tr>
+
+<tr>
+<td><img src="assets/images/quinoa_image.png"></td>
+<td>Organic Quinoa 500g</td>
+<td>Grains</td>
+<td>$420</td>
+<td><span class="status active">In Stock</span></td>
+<td><button class="toggle-btn">Disable</button></td>
+</tr>
+
+<tr>
+<td><img src="assets/images/carrot_image.png"></td>
+<td>Carrot 500g</td>
+<td>Vegetables</td>
+<td>$44</td>
+<td><span class="status active">In Stock</span></td>
+<td><button class="toggle-btn">Disable</button></td>
+</tr>
+
+<tr>
+<td><img src="assets/images/apple_image.png"></td>
+<td>Apple 1 kg</td>
+<td>Fruits</td>
+<td>$90</td>
+<td><span class="status active">In Stock</span></td>
+<td><button class="toggle-btn">Disable</button></td>
+</tr>
+
+<tr>
+<td><img src="assets/images/mango_image_1.png"></td>
+<td>Mango 1 kg</td>
+<td>Fruits</td>
+<td>$140</td>
+<td><span class="status active">In Stock</span></td>
+<td><button class="toggle-btn">Disable</button></td>
+</tr>
+
+<tr>
+<td><img src="assets/images/coca_cola_image.png"></td>
+<td>Coca-Cola 1.5L</td>
+<td>Drinks</td>
+<td>$75</td>
+<td><span class="status active">In Stock</span></td>
+<td><button class="toggle-btn">Disable</button></td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+    </div>
+    </div>
+
+
+
+    <script>
+
+document.querySelectorAll(".toggle-btn").forEach(btn => {
+
+btn.onclick = function(){
+
+let row = this.closest("tr")
+let status = row.querySelector(".status")
+
+if(status.classList.contains("active")){
+
+status.classList.remove("active")
+status.classList.add("disabled")
+status.innerText = "Disabled"
+
+this.innerText = "Enable"
+
+}else{
+
+status.classList.remove("disabled")
+status.classList.add("active")
+status.innerText = "In Stock"
+
+this.innerText = "Disable"
+
+}
+
+}
+
+})
+
+</script>
+</body>
+</html>
