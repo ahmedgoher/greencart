@@ -1,0 +1,146 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Outfit", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(120deg, #f8f9fb, #eef1f6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ===== الـ Container الرئيسي ===== */
+    .login-container {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 40px 35px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    /* ===== الـ Header ===== */
+    .login-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .login-header h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .login-header p {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    /* ===== الـ Input Groups ===== */
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      outline: none;
+      font-size: 14px;
+      transition: 0.2s;
+      background: #fff;
+    }
+
+    .input-group input:focus {
+      border-color: #111827;
+      box-shadow: 0 0 0 2px rgba(17, 24, 39, 0.08);
+    }
+
+    /* ===== الخيارات: Remember me + Forgot Password ===== */
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 5px;
+      margin-bottom: 8px;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 14px;
+      color: #374151;
+      cursor: pointer;
+    }
+
+    .remember-me input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: #111827;
+      cursor: pointer;
+    }
+
+    .forgot-password {
+      font-size: 14px;
+      color: #111827;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== زر تسجيل الدخول ===== */
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: none;
+      background: #111827;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.25s;
+      font-family: "Outfit", sans-serif;
+    }
+
+    .login-btn:hover {
+      background: #000;
+      transform: translateY(-1px);
+    }
+
+    /* ===== لينك إنشاء حساب جديد ===== */
+    .signup-link {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .signup-link a {
+      color: #111827;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
